@@ -16,13 +16,6 @@ export const machines = [
     writeup: boardLightWriteup,
   },
   {
-    name: "Chemistry",
-    os: "Linux",
-    difficulty: "Easy",
-    description: "File upload bypass → RCE → privesc using LinPEAS findings",
-    writeup: [],
-  },
-  {
     name: "Alert",
     os: "Linux",
     difficulty: "Easy",
@@ -36,5 +29,12 @@ export const machines = [
     description: "daloRADIUS default creds → SSH → privesc via mosh-server",
     writeup: underpassWriteup,
     images: [IMG1, IMG2, IMG3, IMG4, IMG5],
+  },
+  {
+    name: "Chemistry",
+    os: "Linux",
+    difficulty: "Easy",
+    description: "File upload bypass → RCE → privesc using LinPEAS findings",
+    writeup: [],
   },
 ];
