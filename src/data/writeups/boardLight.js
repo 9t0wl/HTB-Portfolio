@@ -209,8 +209,8 @@ export const boardLightWriteup = [
         Our efforts paid off, and we successfully captured the final flag. This
         machine offered a wealth of learning opportunities, reinforcing the
         invaluable lesson that persistence and continuous learning are key in
-        the field of cybersecurity. Keep exploring, and happy hunting! 9t0wl
-        #1984386
+        the field of cybersecurity. Keep exploring, and happy hunting!{" "}
+        <a href="https://app.hackthebox.com/profile/1984386">9t0wl #1984386</a>
       </p>
     </>
   ),

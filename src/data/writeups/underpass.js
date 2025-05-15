@@ -156,6 +156,7 @@ export const underpassWriteup = [
         compromise!
       </p>
       <h3>✅ Machine Completed: UnderPass</h3>
+      <a href="https://app.hackthebox.com/profile/1984386">9t0wl #1984386</a>
     </>
   ),
 ];
