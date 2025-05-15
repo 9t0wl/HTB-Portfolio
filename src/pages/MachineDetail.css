@@ -1,0 +1,71 @@
+.machine-detail {
+  background-color: #0f0f0f; /* solid black background */
+  color: #39ff14;
+  font-family: "Fira Code", monospace;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.machine-detail h1 {
+  font-family: "VT323", monospace;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.machine-detail p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.machine-detail button {
+  background-color: transparent;
+  color: #39ff14;
+  border: 1px solid #39ff14;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.machine-detail button:hover {
+  background-color: #39ff14;
+  color: #1e1e1e;
+}
+
+.writeup {
+  background-color: #1e1e1e;
+  border: 2px solid #39ff14;
+  padding: 20px;
+  color: #39ff14;
+  font-size: 18px;
+  max-width: 800px;
+  white-space: pre-wrap;
+  line-height: 1.5;
+  box-shadow: 0 0 10px #39ff14;
+  margin-bottom: 40px;
+}
+.writeup img {
+  max-width: 800px;
+  width: 100%;
+  border: 2px solid #39ff14;
+  box-shadow: 0 0 10px #39ff14;
+  margin: 20px 0;
+}
+/* Restrict markdown container */
+.writeup-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style markdown images */
+.writeup-container img {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #39ff14;
+  box-shadow: 0 0 10px #39ff14;
+}

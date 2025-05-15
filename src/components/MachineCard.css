@@ -1,0 +1,71 @@
+.machine-card {
+  background-color: #1e1e1e;
+  border: 2px solid #39ff14;
+  box-shadow: 0 0 10px #39ff14;
+  border-radius: 8px;
+  width: 220px; /* slightly wider */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 15px 10px;
+  margin: 15px;
+}
+
+.machine-card:hover {
+  transform: translateY(-10px) rotate(-2deg);
+  box-shadow: 0 0 20px #39ff14;
+}
+
+.machine-card h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.machine-card p {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 0 10px;
+  margin-bottom: 15px;
+}
+
+.machine-card button {
+  font-size: 0.9rem;
+  background-color: transparent;
+  color: #d400ff;
+  border: 1px solid #d400ff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  margin-top: auto; /* ✅ THIS IS THE MAGIC FIX */
+}
+
+.machine-card button:hover {
+  background-color: #d400ff;
+  color: #1e1e1e;
+}
+
+.badge {
+  background-color: #39ff14;
+  color: #0f0f0f;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 5px #d400ff;
+  }
+  50% {
+    box-shadow: 0 0 20px #d400ff;
+  }
+  100% {
+    box-shadow: 0 0 5px #d400ff;
+  }
+}

@@ -1,0 +1,95 @@
+.home {
+  min-height: 100vh;
+}
+
+.intro {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.intro h1 {
+  font-size: 5rem;
+  margin-bottom: 10px;
+  color: #39ff14;
+  text-shadow: 0 0 5px #39ff14;
+}
+
+.intro p {
+  font-size: 1.5rem;
+}
+
+.machines {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  justify-items: center;
+  padding: 20px;
+}
+
+.intro h1,
+.machine-card h2 {
+  font-family: "VT323", monospace !important;
+}
+.glitch {
+  color: #39ff14;
+  font-family: "VT323", monospace;
+  font-size: 5rem;
+  position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+}
+
+.glitch::before {
+  animation: glitchTop 1s infinite linear alternate-reverse;
+  color: #d400ff;
+  z-index: -1;
+}
+
+.glitch::after {
+  animation: glitchBottom 1s infinite linear alternate-reverse;
+  color: #00f0ff;
+  z-index: -1;
+}
+
+@keyframes glitchTop {
+  0% {
+    clip: rect(0, 9999px, 0, 0);
+  }
+  5% {
+    clip: rect(0, 9999px, 5px, 0);
+  }
+  10% {
+    clip: rect(5px, 9999px, 5px, 0);
+  }
+  15% {
+    clip: rect(5px, 9999px, 10px, 0);
+  }
+  20%,
+  100% {
+    clip: rect(0, 9999px, 0, 0);
+  }
+}
+
+@keyframes glitchBottom {
+  0% {
+    clip: rect(95px, 9999px, 100px, 0);
+  }
+  5% {
+    clip: rect(90px, 9999px, 100px, 0);
+  }
+  10% {
+    clip: rect(85px, 9999px, 95px, 0);
+  }
+  15% {
+    clip: rect(80px, 9999px, 90px, 0);
+  }
+  20%,
+  100% {
+    clip: rect(95px, 9999px, 100px, 0);
+  }
+}
