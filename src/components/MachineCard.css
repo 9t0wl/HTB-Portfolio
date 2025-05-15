@@ -40,7 +40,7 @@
   border-radius: 5px;
   cursor: pointer;
   animation: pulse 2s infinite;
-  margin-top: auto; /* ✅ THIS IS THE MAGIC FIX */
+  margin-top: auto;
 }
 
 .machine-card button:hover {
