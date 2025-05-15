@@ -1,18 +1,34 @@
 {
   "files": {
     "main.css": "/HTB-Portfolio/static/css/main.5540bcde.css",
-    "main.js": "/HTB-Portfolio/static/js/main.686e2cc2.js",
+    "main.js": "/HTB-Portfolio/static/js/main.0caaca13.js",
+    "static/media/BoardLight.png": "/HTB-Portfolio/static/media/BoardLight.87b43aecce170a62356d.png",
     "static/media/UnderPass.png": "/HTB-Portfolio/static/media/UnderPass.761427dca3ddee559e2c.png",
+    "static/media/boardlightlarissalogin.png": "/HTB-Portfolio/static/media/boardlightlarissalogin.202cd2e84be420c0e6b8.png",
     "static/media/1underpassscreenshot.png": "/HTB-Portfolio/static/media/1underpassscreenshot.5bb8b255f2fe3c644da7.png",
     "static/media/2underpassscreenshot.png": "/HTB-Portfolio/static/media/2underpassscreenshot.00efa070fe7763ec0dd6.png",
     "static/media/3underpassscreenshot.png": "/HTB-Portfolio/static/media/3underpassscreenshot.2ae847eaddf413daac7c.png",
     "static/media/pwnedunderpass.png": "/HTB-Portfolio/static/media/pwnedunderpass.79a6af4ccb3f4438f6cd.png",
+    "static/media/boardlightnmap.png": "/HTB-Portfolio/static/media/boardlightnmap.b847b407ea382fd7512b.png",
+    "static/media/boardlightuserflag.png": "/HTB-Portfolio/static/media/boardlightuserflag.d526718dc47e86eeb57f.png",
+    "static/media/boardlightpwned.png": "/HTB-Portfolio/static/media/boardlightpwned.fb71d0e6c483c6413405.png",
+    "static/media/boardlightlinpeas.png": "/HTB-Portfolio/static/media/boardlightlinpeas.5115d2a3243ca3031892.png",
+    "static/media/boardlightexploit.png": "/HTB-Portfolio/static/media/boardlightexploit.e32590fd6070878de1c6.png",
+    "static/media/boardlightconfig.png": "/HTB-Portfolio/static/media/boardlightconfig.b597ca874acf74d71238.png",
+    "static/media/boardlightserver.png": "/HTB-Portfolio/static/media/boardlightserver.e876fee0fcda30825bce.png",
+    "static/media/boardlightffufscan.png": "/HTB-Portfolio/static/media/boardlightffufscan.824ea0561ede6f72a550.png",
+    "static/media/boardlightwebget.png": "/HTB-Portfolio/static/media/boardlightwebget.bb093ec36d256ea9c522.png",
+    "static/media/boardlightphptest.png": "/HTB-Portfolio/static/media/boardlightphptest.cf5443714e902b2cd02e.png",
+    "static/media/boardlighthomepage.png": "/HTB-Portfolio/static/media/boardlighthomepage.6db8d8871323df610136.png",
+    "static/media/boardlightphpsuccess.png": "/HTB-Portfolio/static/media/boardlightphpsuccess.1caa7b66eda5255dbef2.png",
+    "static/media/boardlightlogindash.png": "/HTB-Portfolio/static/media/boardlightlogindash.6eba474ea6ba221b4102.png",
+    "static/media/boardlightncconnect.png": "/HTB-Portfolio/static/media/boardlightncconnect.e5179f97a7a6179525f7.png",
     "index.html": "/HTB-Portfolio/index.html",
     "main.5540bcde.css.map": "/HTB-Portfolio/static/css/main.5540bcde.css.map",
-    "main.686e2cc2.js.map": "/HTB-Portfolio/static/js/main.686e2cc2.js.map"
+    "main.0caaca13.js.map": "/HTB-Portfolio/static/js/main.0caaca13.js.map"
   },
   "entrypoints": [
     "static/css/main.5540bcde.css",
-    "static/js/main.686e2cc2.js"
+    "static/js/main.0caaca13.js"
   ]
 }
