@@ -1,3 +1,4 @@
+/* global reset */
 body {
   margin: 0;
   background-color: #0f0f0f;
@@ -6,8 +7,18 @@ body {
   font-size: 24px;
 }
 
+/* make sure root cannot cause horizontal scroll */
 body,
-html {
+html,
+#root {
   position: relative;
   z-index: 1;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* optional: force images never break layout */
+img {
+  max-width: 100%;
+  height: auto;
 }

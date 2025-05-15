@@ -1,5 +1,7 @@
+/* src/pages/MachineDetail.css */
+
 .machine-detail {
-  background-color: #0f0f0f; /* solid black background */
+  background-color: #0f0f0f;
   color: #39ff14;
   font-family: "Fira Code", monospace;
   min-height: 100vh;
@@ -34,6 +36,7 @@
   color: #1e1e1e;
 }
 
+/* ✅ Writeup container */
 .writeup {
   background-color: #1e1e1e;
   border: 2px solid #39ff14;
@@ -45,7 +48,11 @@
   line-height: 1.5;
   box-shadow: 0 0 10px #39ff14;
   margin-bottom: 40px;
+  overflow-x: auto;
+  word-wrap: break-word;
 }
+
+/* ✅ Image inside writeup */
 .writeup img {
   max-width: 800px;
   width: 100%;
@@ -53,14 +60,15 @@
   box-shadow: 0 0 10px #39ff14;
   margin: 20px 0;
 }
-/* Restrict markdown container */
+
+/* ✅ Markdown container */
 .writeup-container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Style markdown images */
+/* ✅ Markdown images */
 .writeup-container img {
   display: block;
   margin: 20px auto;
@@ -68,4 +76,39 @@
   height: auto;
   border: 2px solid #39ff14;
   box-shadow: 0 0 10px #39ff14;
+}
+
+/* ✅ Bulletproof long code / pre line breaking */
+pre,
+code,
+pre > code {
+  display: block;
+  overflow-x: auto;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  white-space: pre-wrap;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* ✅ Mobile tweaks */
+@media screen and (max-width: 768px) {
+  .machine-detail {
+    padding: 20px 10px;
+  }
+
+  .machine-detail h1 {
+    font-size: 2.2rem;
+  }
+
+  .writeup {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  pre,
+  code,
+  pre > code {
+    font-size: 14px;
+  }
 }
