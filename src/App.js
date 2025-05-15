@@ -2,19 +2,21 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import MachineDetail from "./pages/MachineDetail";
-import "./App.css";
 import MatrixBackground from "./components/MatrixBackground";
+import "./App.css";
 
-export default function App() {
+function App() {
   return (
     <>
       <MatrixBackground />
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/machine/:name" element={<MachineDetail />} />
+          <Route path="/machine/:machineName" element={<MachineDetail />} />
         </Routes>
       </div>
     </>
   );
 }
+
+export default App;

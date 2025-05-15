@@ -7,13 +7,18 @@ export default function MatrixBackground() {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
 
     const letters =
       "アァイィウエェオカガキギクグケゲコゴサザシジスズセゼソゾタダチッヂヅテデトドナニヌネノハバパヒビピフブプヘベペホボポマミムメモヤユヨラリルレロワヲンABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     const fontSize = 14;
-    const columns = canvas.width / fontSize;
+    const columns = Math.floor(window.innerWidth / fontSize);
     const drops = Array.from({ length: columns }, () => 1);
 
     const draw = () => {
@@ -37,7 +42,10 @@ export default function MatrixBackground() {
 
     const interval = setInterval(draw, 33);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener("resize", resizeCanvas);
+    };
   }, []);
 
   return (
@@ -47,10 +55,10 @@ export default function MatrixBackground() {
         position: "fixed",
         top: 0,
         left: 0,
-        zIndex: -1,
         width: "100%",
         height: "100%",
-        background: "#000",
+        zIndex: -9999,
+        pointerEvents: "none",
       }}
     />
   );

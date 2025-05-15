@@ -1,36 +1,36 @@
-// ✅ src/pages/MachineDetail.js
 import React from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { machines } from "../data/machines";
-import "./MachineDetail.css";
+import "../pages/MachineDetail.css";
 
-export default function MachineDetail() {
-  const { name } = useParams();
+function MachineDetail() {
+  const { machineName } = useParams();
   const machine = machines.find(
-    (m) => m.name.toLowerCase() === name.toLowerCase()
+    (m) => m.name.toLowerCase() === machineName?.toLowerCase()
   );
 
-  if (!machine) return <p>Machine not found.</p>;
+  if (!machine) {
+    return (
+      <div className="machine-detail">
+        <h1>Machine not found</h1>
+        <p>The machine you are looking for does not exist.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="machine-detail">
       <h1>{machine.name}</h1>
       <p>
-        <strong>OS:</strong> {machine.os} | <strong>Difficulty:</strong>{" "}
-        {machine.difficulty}
+        OS: {machine.os} | Difficulty: {machine.difficulty}
       </p>
-
       <div className="writeup-container">
-        {Array.isArray(machine.writeup) ? (
-          machine.writeup.map((Component, index) => <Component key={index} />)
-        ) : (
-          <p>No writeup yet.</p>
-        )}
+        {machine.writeup?.map((Section, index) => (
+          <Section key={index} />
+        ))}
       </div>
-
-      <Link to="/">
-        <button>Back to Home</button>
-      </Link>
     </div>
   );
 }
+
+export default MachineDetail;
