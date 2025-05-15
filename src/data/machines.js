@@ -3,6 +3,7 @@ import IMG2 from "../assets/2underpassscreenshot.png";
 import IMG3 from "../assets/3underpassscreenshot.png";
 import IMG4 from "../assets/pwnedunderpass.png";
 import IMG5 from "../assets/UnderPass.png";
+import { alertWriteup } from "./writeups/alert";
 import { boardLightWriteup } from "./writeups/boardLight";
 import { underpassWriteup } from "./writeups/underpass";
 
@@ -26,7 +27,7 @@ export const machines = [
     os: "Linux",
     difficulty: "Easy",
     description: "Stored XSS → shell injection → privesc via vulnerable config",
-    writeup: [],
+    writeup: alertWriteup,
   },
   {
     name: "UnderPass",
