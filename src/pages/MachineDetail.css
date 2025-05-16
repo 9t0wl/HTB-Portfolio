@@ -112,3 +112,46 @@ pre > code {
     font-size: 14px;
   }
 }
+.back-button {
+  background-color: transparent;
+  color: #39ff14;
+  border: 2px solid #39ff14;
+  padding: 10px 20px;
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: all 0.2s ease-in-out;
+}
+
+.back-button:hover {
+  background-color: #39ff14;
+  color: #0f0f0f;
+}
+.back-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.sticky-back-button {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: #00ff00;
+  color: #000;
+  border: none;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-family: monospace;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 12px #00ff00;
+  z-index: 1000;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.sticky-back-button:hover {
+  transform: scale(1.05);
+  background-color: #1aff1a;
+}
