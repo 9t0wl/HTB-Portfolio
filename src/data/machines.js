@@ -1,6 +1,7 @@
 import { alertWriteup } from "./writeups/alert";
 import { boardLightWriteup } from "./writeups/boardLight";
 import { chemistryWriteup } from "./writeups/chemistry";
+import { escapeTwoWriteup } from "./writeups/escapeTwo";
 import { underpassWriteup } from "./writeups/underpass";
 
 export const machines = [
@@ -31,5 +32,12 @@ export const machines = [
     difficulty: "Easy",
     description: "File upload bypass → RCE → privesc using LinPEAS findings",
     writeup: chemistryWriteup,
+  },
+  {
+    name: "EscapeTwo",
+    os: "Windows",
+    difficulty: "Easy",
+    description: "SMB enumeration → cert abuse with Certipy → DA with NT hash",
+    writeup: escapeTwoWriteup,
   },
 ];
