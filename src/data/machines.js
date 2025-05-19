@@ -1,10 +1,18 @@
 import { alertWriteup } from "./writeups/alert";
 import { boardLightWriteup } from "./writeups/boardLight";
+import { cerealWriteup } from "./writeups/cereal";
 import { chemistryWriteup } from "./writeups/chemistry";
 import { escapeTwoWriteup } from "./writeups/escapeTwo";
 import { underpassWriteup } from "./writeups/underpass";
 
 export const machines = [
+  {
+    name: "Cereal",
+    os: "Windows",
+    difficulty: "Hard",
+    description: "JWT forgery → GraphQL SSRF → RCE → SeImpersonate → SYSTEM",
+    writeup: cerealWriteup,
+  },
   {
     name: "BoardLight",
     os: "Linux",
