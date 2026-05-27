@@ -1,0 +1,52 @@
+// ─────────────────────────────────────────────────────────────
+//  MACHINES DATA
+//
+//  To add a new box:
+//    1. Drop yourbox.md into src/writeups/
+//    2. Add an entry below with writeup: () => import('../writeups/yourbox.md?raw')
+//    3. Save — that's it.
+// ─────────────────────────────────────────────────────────────
+
+export const machines = [
+  {
+    id: 'pingpong',
+    name: 'PingPong',
+    os: 'windows',
+    diff: 'insane',
+    tags: ['ESC13', 'PKINIT', 'Cross-Forest', 'gMSA', 'JEA', 'Kerberos-Only'],
+    date: '2026-04',
+    writeup: () => import('../writeups/pingpong.md?raw'),
+  },
+  {
+    id: 'ghost',
+    name: 'Ghost',
+    os: 'windows',
+    diff: 'hard',
+    tags: ['Golden SAML', 'ADFS', 'DNS Injection', 'Responder', 'NTLMv2'],
+    date: '2026-03',
+    writeup: () => import('../writeups/ghost.md?raw'),
+  },
+  {
+    id: 'eighteen',
+    name: 'Eighteen',
+    os: 'windows',
+    diff: 'hard',
+    tags: ['BadSuccessor', 'dMSA', 'bloodyAD', 'Windows Server 2025'],
+    date: '2026-04',
+    writeup: () => import('../writeups/eighteen.md?raw'),
+  },
+  {
+    id: 'garfield',
+    name: 'Garfield',
+    os: 'windows',
+    diff: 'hard',
+    tags: ['WriteProperty', 'scriptPath', 'Kerberos', 'AD'],
+    date: '2026-04',
+    writeup: () => import('../writeups/garfield.md?raw'),
+  },
+];
+
+// ── helpers ──────────────────────────────────────────────────
+export const getMachine = (id) => machines.find((m) => m.id === id);
+export const diffOrder  = { easy: 0, medium: 1, hard: 2, insane: 3 };
+export const allTags    = [...new Set(machines.flatMap((m) => m.tags))].sort();
