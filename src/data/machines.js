@@ -16,7 +16,7 @@ export const machines = [
     image: '/HTB-Portfolio/images/pingpong.png',
     tags: ['ESC13', 'PKINIT', 'Cross-Forest', 'gMSA', 'JEA', 'Kerberos-Only'],
     date: '2026-04',
-    writeup: () => import('../writeups/pingpong.md?raw'),
+    writeup: () => import('../writeups/lock.md?raw'),
   },
   {
     id: 'ghost',
