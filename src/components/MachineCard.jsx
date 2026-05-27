@@ -15,14 +15,19 @@ const OS_COLOR = {
 };
 
 export default function MachineCard({ machine }) {
-  const { id, name, os, diff, tags, date } = machine;
+  const { id, name, os, diff, tags, date, image } = machine;
   const color = DIFF_COLOR[diff];
 
   return (
     <Link to={`/box/${id}`} className={`${styles.card} ${styles[diff]}`}>
       <div className={styles.header}>
-        <span className={styles.name}>{name}</span>
-        <span className={`${styles.diff} ${styles[`diff_${color}`]}`}>{diff}</span>
+        {image && (
+          <img src={image} alt={name} className={styles.machineImg} />
+        )}
+        <div className={styles.headerText}>
+          <span className={styles.name}>{name}</span>
+          <span className={`${styles.diff} ${styles[`diff_${color}`]}`}>{diff}</span>
+        </div>
       </div>
 
       <div className={styles.os}>
