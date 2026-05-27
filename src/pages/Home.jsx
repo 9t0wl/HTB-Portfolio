@@ -217,7 +217,6 @@ export default function Home() {
             { icon: '⬡', label: 'Hack The Box',  href: 'https://profile.hackthebox.com/profile/019c6cde-6b07-710e-ae72-893fc0e73f14' },
             { icon: '◈', label: 'GitHub',         href: 'https://github.com/9t0wl' },
             { icon: '◉', label: 'LinkedIn',       href: 'https://www.linkedin.com/in/herry-hernandez-43100123b/' },
-            { icon: '◇', label: 'X / Twitter',    href: 'https://x.com/9t0wl' },
           ].map(l => (
             <a key={l.label} href={l.href} className={styles.contactLink} target="_blank" rel="noopener noreferrer">
               <span>{l.icon}</span> {l.label}
