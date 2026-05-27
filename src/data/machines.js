@@ -52,10 +52,10 @@ export const machines = [
     name: 'DarkZero',
     os: 'windows',
     diff: 'hard',
-    image: '/HTB-Portfolio/images/darkzero.png',
+    image: '/HTB-Portfolio/images/Darkzero.png',
     tags: ['ADCS', 'PKINIT', 'SQL Server', 'xp_cmdshell', 'SeImpersonatePrivilege', 'Ligolo', 'DCSync', 'Kerberos'],
     date: '2025-11',
-    writeup: () => import('../writeups/Darkzero.md?raw'),
+    writeup: () => import('../writeups/darkzero.md?raw'),
   },
 ];
 
