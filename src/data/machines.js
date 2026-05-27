@@ -22,7 +22,7 @@ export const machines = [
     id: 'ghost',
     name: 'Ghost',
     os: 'windows',
-    diff: 'hard',
+    diff: 'insane',
     image: 'https://htb-mp-prod-public-storage.s3.eu-central-1.amazonaws.com/avatars/38f90738d0433b8adf27036f18ecf91e.png',
     tags: ['Golden SAML', 'ADFS', 'DNS Injection', 'Responder', 'NTLMv2'],
     date: '2026-03',
