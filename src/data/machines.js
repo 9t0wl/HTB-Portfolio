@@ -47,6 +47,16 @@ export const machines = [
     date: '2026-04',
     writeup: () => import('../writeups/garfield.md?raw'),
   },
+    {
+    id: 'darkZero',
+    name: 'DarkZero',
+    os: 'windows',
+    diff: 'hard',
+    image: '/HTB-Portfolio/images/darkzero.png',
+    tags: ['WriteProperty', 'scriptPath', 'Kerberos', 'AD'],
+    date: '2026-04',
+    writeup: () => import('../writeups/darkzero.md?raw'),
+  },
 ];
 
 // ── helpers ──────────────────────────────────────────────────
