@@ -97,7 +97,7 @@ appdev                                SQL_LOGIN               0
 SQL (kevin  guest@master)> 
 ```
 
-we see another user **`appdev`**, i tried to connect to `financial_planner` as `kevin` but it was getting blocked so lets try with **`appdev`**:
+we see another user **`appdev`**, I tried to connect to `financial_planner` as `kevin` but it was getting blocked so lets try with **`appdev`**:
 ```bash
 SQL (kevin  guest@master)> USE financial_planner;
 ERROR(DC01): Line 1: The server principal "kevin" is not able to access the database "financial_planner" under the current security context.
