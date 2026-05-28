@@ -32,7 +32,7 @@ export const machines = [
     id: 'eighteen',
     name: 'Eighteen',
     os: 'windows',
-    diff: 'insane',
+    diff: 'easy',
     image: '/HTB-Portfolio/images/eighteen.png',
     tags: ['BadSuccessor', 'dMSA', 'bloodyAD', 'Windows Server 2025'],
     date: '2026-04',
