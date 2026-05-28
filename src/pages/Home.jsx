@@ -93,7 +93,7 @@ export default function Home() {
 
           <div className={styles.heroBadges}>
             <span className="badge badge-g">HTB CWES</span>
-            <span className="badge badge-g">CPTS — 100%</span>
+            <span className="badge badge-g">HTB CPTS</span>
             <span className="badge badge-p">Synack Red Team</span>
             <span className="badge badge-pk">CRTO — Active</span>
             <span className="badge badge-pk">PNPT — Active</span>
@@ -115,7 +115,6 @@ export default function Home() {
         {[
           { num: '70+',  label: 'HTB Machines',  color: 'var(--green)' },
           { num: '3',    label: 'Pro Labs',       color: 'var(--purple2)' },
-          { num: '100%', label: 'CPTS Score',     color: 'var(--pink)' },
           { num: '4',    label: 'Active Certs',   color: 'var(--purple2)' },
           { num: 'SRT',  label: 'Synack Red Team',color: 'var(--green)' },
         ].map(s => (
