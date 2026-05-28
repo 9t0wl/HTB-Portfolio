@@ -48,7 +48,7 @@ export const machines = [
     writeup: () => import('../writeups/garfield.md?raw'),
   },
     {
-    id: 'darkZero',
+    id: 'darkzero',
     name: 'DarkZero',
     os: 'windows',
     diff: 'hard',
