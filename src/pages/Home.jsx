@@ -29,7 +29,7 @@ const tools = [
     name: 'CRTO Notes',
     desc: 'Single-file tactical reference covering all CRTO lab attack paths. Built for speed under exam conditions — searchable, indexed, no dependencies.',
     lang: 'HTML · JavaScript',
-    href: 'https://github.com/9t0wl/crto-notes',
+    href: 'https://9t0wl.github.io/crto-notes/',
   },
   {
     icon: '[ C# ]',
