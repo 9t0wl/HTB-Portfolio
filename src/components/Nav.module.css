@@ -22,6 +22,9 @@
   font-weight: 900;
   letter-spacing: 0.1em;
   color: #39ff14;
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 0.2rem 0.6rem;
   text-shadow:
     0 0 7px #39ff14,
     0 0 10px #39ff14,
