@@ -520,4 +520,6 @@ Mode                 LastWriteTime         Length Name
 a47e7de04d49c5e4d94a88fd69e9ff06
 *Evil-WinRM* PS C:\Users\Administrator\Desktop> 
 ```
-![[Pasted image 20260326115033.png]]
+## Proof
+
+![Eighteen Root Flag](/HTB-Portfolio/images/18fin.png)
