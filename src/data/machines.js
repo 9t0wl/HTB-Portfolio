@@ -47,12 +47,12 @@ export const machines = [
     date: '2026-04',
     writeup: () => import('../writeups/garfield.md?raw'),
   },
-    {
+  {
     id: 'darkzero',
     name: 'DarkZero',
     os: 'windows',
     diff: 'hard',
-    image: '/HTB-Portfolio/images/darkzero.png',
+    image: '/HTB-Portfolio/images/dz.png',
     tags: ['ADCS', 'PKINIT', 'SQL Server', 'xp_cmdshell', 'SeImpersonatePrivilege', 'Ligolo', 'DCSync', 'Kerberos'],
     date: '2025-11',
     writeup: () => import('../writeups/darkzero.md?raw'),
