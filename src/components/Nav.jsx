@@ -16,10 +16,10 @@ export default function Nav() {
   useEffect(() => setMenuOpen(false), [location]);
 
   const links = [
-    { to: '/#certs', label: 'certs' },
-    { to: '/#boxes', label: 'boxes' },
-    { to: '/#tools', label: 'tools' },
-    { to: '/#contact', label: 'contact' },
+  { to: '/HTB-Portfolio/#certs', label: 'certs' },
+  { to: '/HTB-Portfolio/#boxes', label: 'boxes' },
+  { to: '/HTB-Portfolio/#tools', label: 'tools' },
+  { to: '/HTB-Portfolio/#contact', label: 'contact' },
   ];
 
   return (
