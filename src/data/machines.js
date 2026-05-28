@@ -29,6 +29,16 @@ export const machines = [
     writeup: () => import('../writeups/ghost.md?raw'),
   },
   {
+    id: 'darkzero',
+    name: 'DarkZero',
+    os: 'windows',
+    diff: 'hard',
+    image: '/HTB-Portfolio/images/dz.png',
+    tags: ['ADCS', 'PKINIT', 'SQL Server', 'xp_cmdshell', 'SeImpersonatePrivilege', 'Ligolo', 'DCSync', 'Kerberos'],
+    date: '2025-11',
+    writeup: () => import('../writeups/darkzero.md?raw'),
+  },
+  {
     id: 'eighteen',
     name: 'Eighteen',
     os: 'windows',
@@ -46,16 +56,6 @@ export const machines = [
     tags: ['WriteProperty', 'scriptPath', 'Kerberos', 'AD'],
     date: '2026-04',
     writeup: () => import('../writeups/garfield.md?raw'),
-  },
-  {
-    id: 'darkzero',
-    name: 'DarkZero',
-    os: 'windows',
-    diff: 'hard',
-    image: '/HTB-Portfolio/images/dz.png',
-    tags: ['ADCS', 'PKINIT', 'SQL Server', 'xp_cmdshell', 'SeImpersonatePrivilege', 'Ligolo', 'DCSync', 'Kerberos'],
-    date: '2025-11',
-    writeup: () => import('../writeups/darkzero.md?raw'),
   },
 ];
 

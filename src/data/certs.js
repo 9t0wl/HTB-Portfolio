@@ -20,8 +20,8 @@ export const certs = [
     issuer: 'Hack The Box',
     status: 'achieved',
     color: 'purple',
-    score: '100%',
-    desc: 'Full-scope enterprise pentest simulation — AD exploitation, cross-forest pivoting, multi-stage attack chains across segmented infrastructure. Passed with 100%.',
+    certId: 'HTBCERT-9B1E8C2D3F',
+    desc: 'Full-scope enterprise pentest simulation — AD exploitation, cross-forest pivoting, multi-stage attack chains across segmented infrastructure.',
   },
   {
     id: 'crto',
