@@ -1,3 +1,4 @@
+![Ghost](/HTB-Portfolio/images/pwndghost.png)
 ```shell
 nmap -A -T4 --min-rate 10000 -Pn -p- -oN nmap.txt 10.129.8.170                                                         
 Starting Nmap 7.98 ( https://nmap.org ) at 2026-03-18 21:51 +0000
