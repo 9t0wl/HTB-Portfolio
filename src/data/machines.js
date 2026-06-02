@@ -19,6 +19,16 @@ export const machines = [
     writeup: () => import('../writeups/lock.md?raw'),
   },
   {
+  id: 'reaper',
+  name: 'Reaper',
+  os: 'windows',
+  diff: 'insane',
+  image: '/HTB-Portfolio/images/reaper.png',
+  tags: ['Buffer Overflow', 'ROP Chain', 'ASLR Bypass', 'DPAPI', 'Kernel Exploit', 'Token Stealing'],
+  date: '2026-05',
+  writeup: () => import('../writeups/reaper.md?raw'),
+  },
+  {
     id: 'ghost',
     name: 'Ghost',
     os: 'windows',
