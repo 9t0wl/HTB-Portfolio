@@ -41,7 +41,7 @@ const tools = [
   {
     icon: '[ PY ]',
     name: 'AD Attack Scripts',
-    desc: 'Personal collection refined across 70+ machines and Pro Labs — Kerberoasting, AS-REP, BloodHound CE automation, Ligolo-ng tunnel setup, faketime wrappers.',
+    desc: 'Personal collection refined across 100+ machines and Pro Labs — Kerberoasting, AS-REP, BloodHound CE automation, Ligolo-ng tunnel setup, faketime wrappers.',
     lang: 'Python · Bash · PowerShell',
     href: 'https://github.com/9t0wl',
   },
@@ -113,7 +113,7 @@ export default function Home() {
       {/* ── STATS BAR ── */}
       <div className={styles.statsBar}>
         {[
-          { num: '70+',  label: 'HTB Machines',  color: 'var(--green)' },
+          { num: '100+', label: 'HTB Machines',  color: 'var(--green)' },
           { num: '3',    label: 'Pro Labs',       color: 'var(--purple2)' },
           { num: '4',    label: 'Active Certs',   color: 'var(--purple2)' },
           { num: 'SRT',  label: 'Synack Red Team',color: 'var(--green)' },
