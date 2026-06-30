@@ -115,7 +115,7 @@ export default function Home() {
         {[
           { num: '100+', label: 'HTB Machines',  color: 'var(--green)' },
           { num: '3',    label: 'Pro Labs',       color: 'var(--purple2)' },
-          { num: '4',    label: 'Active Certs',   color: 'var(--purple2)' },
+          { num: '3',    label: 'Active Certs',   color: 'var(--purple2)' },
           { num: 'SRT',  label: 'Synack Red Team',color: 'var(--green)' },
         ].map(s => (
           <div key={s.label} className={`${styles.statItem} reveal`}>
