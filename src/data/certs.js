@@ -28,10 +28,9 @@ export const certs = [
     name: 'CRTO',
     fullName: 'Certified Red Team Operator',
     issuer: 'Zero-Point Security (RastaMouse)',
-    status: 'active',
-    color: 'pink',
-    progress: 93,
-    desc: 'Cobalt Strike TTPs, Malleable C2, OPSEC-conscious AD attacks — ADCS ESC paths, Kerberos, Trusts, AppLocker bypass.',
+    status: 'achieved',
+    color: 'green',
+    desc: 'Cobalt Strike red team operations under live EDR — Malleable C2, Artifact Kit evasion, AppLocker bypass, constrained delegation, inter-realm trust abuse, and OPSEC-conscious multi-domain lateral movement.',
   },
   {
     id: 'pnpt',
