@@ -42,15 +42,6 @@ export const certs = [
     desc: 'Practical network and AD penetration testing — real-world methodology, report writing, professional tradecraft.',
   },
   {
-    id: 'srt',
-    name: 'Synack Red Team',
-    fullName: 'Vetted Red Team Operator',
-    issuer: 'Synack',
-    status: 'achieved',
-    color: 'green',
-    desc: 'Vetted access to Synack\'s crowdsourced security platform. Active engagements across diverse client environments.',
-  },
-  {
     id: 'prolabs',
     name: 'HTB Pro Labs',
     fullName: 'Enterprise Lab Simulations',
