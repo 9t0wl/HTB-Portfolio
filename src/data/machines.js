@@ -9,6 +9,16 @@
 
 export const machines = [
   {
+    id: 'intelligence',
+    name: 'Intelligence',
+    os: 'windows',
+    diff: 'medium',
+    image: '/HTB-Portfolio/images/intelligence.png',
+    tags: ['PDF OSINT', 'exiftool', 'Password Spray', 'ADIDNS Abuse', 'Responder', 'ReadGMSAPassword', 'Constrained Delegation', 'S4U2Proxy'],
+    date: '2026-07',
+    writeup: () => import('../writeups/intelligence.md?raw'),
+  },
+  {
     id: 'nanocorp',
     name: 'NanoCorp',
     os: 'windows',
