@@ -18,6 +18,7 @@ export default function Nav() {
   const links = [
   { to: '/HTB-Portfolio/#certs', label: 'certs' },
   { to: '/HTB-Portfolio/#boxes', label: 'boxes' },
+  { to: '/HTB-Portfolio/#challenges', label: 'challenges' },
   { to: '/HTB-Portfolio/#tools', label: 'tools' },
   { to: '/HTB-Portfolio/#contact', label: 'contact' },
   ];

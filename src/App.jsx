@@ -10,7 +10,8 @@ export default function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/box/:id" element={<WriteupPage />} />
+        <Route path="/box/:id" element={<WriteupPage type="machine" />} />
+        <Route path="/challenge/:id" element={<WriteupPage type="challenge" />} />
       </Routes>
     </BrowserRouter>
   );

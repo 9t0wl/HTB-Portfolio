@@ -3,38 +3,60 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { getMachine, machines, diffOrder } from '../data/machines';
+import { getChallenge, challenges, challengeDiffOrder } from '../data/challenges';
 import styles from './WriteupPage.module.css';
 
 const DIFF_COLOR = {
+  'very-easy': 'var(--green)',
   easy:   'var(--green)',
   medium: '#f59e0b',
   hard:   'var(--pink)',
   insane: 'var(--purple2)',
 };
 
-const OS_COLOR = {
-  windows: '#60a5fa',
-  linux:   'var(--green)',
-  freebsd: '#f97316',
+// One config per content type — adding a new type (e.g. Sherlocks) means
+// adding one more entry here, not a new page.
+const TYPES = {
+  machine: {
+    getItem: getMachine,
+    items: machines,
+    diffOrder,
+    basePath: '/box',
+    sectionLabel: 'boxes',
+    notFoundLabel: 'machine',
+    fieldKey: 'os',
+    fieldColor: { windows: '#60a5fa', linux: 'var(--green)', freebsd: '#f97316' },
+  },
+  challenge: {
+    getItem: getChallenge,
+    items: challenges,
+    diffOrder: challengeDiffOrder,
+    basePath: '/challenge',
+    sectionLabel: 'challenges',
+    notFoundLabel: 'challenge',
+    fieldKey: 'category',
+    fieldColor: { reversing: 'var(--purple2)', crypto: '#60a5fa', malware: 'var(--pink)', web: 'var(--green)', pwn: '#f97316' },
+  },
 };
 
-export default function WriteupPage() {
-  const { id }       = useParams();
-  const navigate     = useNavigate();
-  const machine      = getMachine(id);
-  const [content, setContent]   = useState('');
-  const [loading, setLoading]   = useState(true);
-  const [error,   setError]     = useState(false);
+export default function WriteupPage({ type = 'machine' }) {
+  const cfg           = TYPES[type];
+  const { id }        = useParams();
+  const navigate       = useNavigate();
+  const item           = cfg.getItem(id);
+  const [content, setContent] = useState('');
+  const [loading, setLoading] = useState(true);
+  const [error,   setError]   = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    if (!machine) { setLoading(false); return; }
+    if (!item) { setLoading(false); return; }
 
     setLoading(true);
     setContent('');
     setError(false);
 
-    machine.writeup()
+    item.writeup()
       .then((mod) => {
         setContent(mod.default);
         setLoading(false);
@@ -43,21 +65,22 @@ export default function WriteupPage() {
         setError(true);
         setLoading(false);
       });
-  }, [id]);
+  }, [id, type]);
 
-  if (!machine) {
+  if (!item) {
     return (
       <div className={styles.notFound}>
         <div className={styles.nfCode}>404</div>
-        <div className={styles.nfMsg}>// machine not found</div>
+        <div className={styles.nfMsg}>// {cfg.notFoundLabel} not found</div>
         <Link to="/" className="btn btn-p" style={{ marginTop: '2rem' }}>← back home</Link>
       </div>
     );
   }
 
-  const { name, os, diff, tags, date } = machine;
+  const { name, diff, tags, date } = item;
+  const fieldVal = item[cfg.fieldKey];
 
-  const sorted = [...machines].sort((a, b) => diffOrder[a.diff] - diffOrder[b.diff]);
+  const sorted = [...cfg.items].sort((a, b) => cfg.diffOrder[a.diff] - cfg.diffOrder[b.diff]);
   const idx    = sorted.findIndex((m) => m.id === id);
   const prev   = sorted[idx - 1];
   const next   = sorted[idx + 1];
@@ -70,7 +93,7 @@ export default function WriteupPage() {
         <div className={styles.breadcrumb}>
           <Link to="/">9t0wl</Link>
           <span>/</span>
-          <Link to="/#boxes">boxes</Link>
+          <Link to={`/#${cfg.sectionLabel}`}>{cfg.sectionLabel}</Link>
           <span>/</span>
           <span>{name}</span>
         </div>
@@ -83,8 +106,8 @@ export default function WriteupPage() {
             {diff}
           </span>
           <span className={styles.osBadge}>
-            <span className={styles.osDot} style={{ background: OS_COLOR[os] }} />
-            {os}
+            <span className={styles.osDot} style={{ background: cfg.fieldColor[fieldVal] }} />
+            {fieldVal}
           </span>
           {date && <span className={styles.dateBadge}>{date}</span>}
         </div>
@@ -117,13 +140,13 @@ export default function WriteupPage() {
       {/* Prev / Next */}
       <nav className={styles.prevNext}>
         {prev ? (
-          <Link to={`/box/${prev.id}`} className={styles.navBtn}>
+          <Link to={`${cfg.basePath}/${prev.id}`} className={styles.navBtn}>
             <span className={styles.navDir}>← prev</span>
             <span className={styles.navName}>{prev.name}</span>
           </Link>
         ) : <div />}
         {next ? (
-          <Link to={`/box/${next.id}`} className={`${styles.navBtn} ${styles.navRight}`}>
+          <Link to={`${cfg.basePath}/${next.id}`} className={`${styles.navBtn} ${styles.navRight}`}>
             <span className={styles.navDir}>next →</span>
             <span className={styles.navName}>{next.name}</span>
           </Link>

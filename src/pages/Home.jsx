@@ -1,13 +1,16 @@
 import { useState, useEffect } from 'react';
 import { machines } from '../data/machines';
+import { challenges } from '../data/challenges';
 import { certs } from '../data/certs';
 import MachineCard from '../components/MachineCard';
+import ChallengeCard from '../components/ChallengeCard';
 import CertCard from '../components/CertCard';
 import OwlSVG from '../components/OwlSVG';
 import useReveal from '../components/useReveal';
 import styles from './Home.module.css';
 
 const FILTERS = ['all', 'easy', 'medium', 'hard', 'insane', 'windows', 'linux'];
+const CHALLENGE_FILTERS = ['all', 'very-easy', 'easy', 'medium', 'hard', 'insane', 'reversing', 'crypto', 'malware'];
 
 const tools = [
   {
@@ -56,6 +59,7 @@ const tools = [
 
 export default function Home() {
   const [filter, setFilter] = useState('all');
+  const [challengeFilter, setChallengeFilter] = useState('all');
   const [cursorPos, setCursorPos] = useState({ x: -500, y: -500 });
   const revealRef = useReveal();
 
@@ -67,6 +71,10 @@ export default function Home() {
 
   const filtered = machines.filter(m =>
     filter === 'all' || m.diff === filter || m.os === filter
+  );
+
+  const filteredChallenges = challenges.filter(c =>
+    challengeFilter === 'all' || c.diff === challengeFilter || c.category === challengeFilter
   );
 
   return (
@@ -171,6 +179,41 @@ export default function Home() {
 
         <div className={`${styles.boxCount} reveal`}>
           <span>{filtered.length} writeup{filtered.length !== 1 ? 's' : ''} published</span>
+          {' · more added regularly '}
+          <span className="blink">_</span>
+        </div>
+      </section>
+
+      {/* ── HTB CHALLENGES ── */}
+      <section id="challenges" className={styles.section}>
+        <div className={`${styles.sectionHeader} reveal`}>
+          <div className="section-label">hack the box</div>
+          <h2 className="section-title">Challenge <span className="accent-g">Writeups</span></h2>
+          <div className="section-line" />
+        </div>
+
+        <div className={`${styles.filters} reveal`}>
+          {CHALLENGE_FILTERS.map(f => (
+            <button
+              key={f}
+              className={`${styles.filterBtn} ${challengeFilter === f ? styles.filterActive : ''}`}
+              onClick={() => setChallengeFilter(f)}
+            >
+              {f}
+            </button>
+          ))}
+        </div>
+
+        <div className={styles.boxesGrid}>
+          {filteredChallenges.map((c, i) => (
+            <div key={c.id} className="reveal" style={{ transitionDelay: `${i * 50}ms` }}>
+              <ChallengeCard challenge={c} />
+            </div>
+          ))}
+        </div>
+
+        <div className={`${styles.boxCount} reveal`}>
+          <span>{filteredChallenges.length} writeup{filteredChallenges.length !== 1 ? 's' : ''} published</span>
           {' · more added regularly '}
           <span className="blink">_</span>
         </div>
